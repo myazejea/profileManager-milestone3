@@ -2,6 +2,7 @@ var express = require('express');
 
 var app = express();
 var config = require('./config/database');
+var data = require('./DB/connectDB');
 var passport = require('passport');
 app.set('view engine', 'ejs');
 
@@ -12,15 +13,19 @@ app.use('/events',express.static('events'));
 
 // var library = require('./routes/libraryNav.js');
 // app.use('/library', library);
-
+console.log(data)
 
 app.get('/', function(req,res){
   res.render('index', {fans: req.query});
 });
 
 
-app.get('/connection', function(req,res){
-  res.render('connection');
+app.get('/events', function(req,res){
+  res.render('allEvents', {data: data});
+});
+
+app.get('/events/:id', function(req,res){
+  res.render('event', {data: data[req.params.id]});
 });
 
 app.get('/contact', function(req,res){
@@ -31,9 +36,6 @@ app.get('/about', function(req,res){
   res.render('about');
 });
 
-app.get('/events', function(req, res){
-  res.render('events');
-})
 
 app.get('/login', function(req, res){
   res.render('login');

@@ -3,25 +3,25 @@
 	<head>
      <title>Events</title>
 		 <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
-     <script src="DB/connectDB.js"></script>
+
 	</head>
 	<header>
 		<% include partials/nav.ejs %>
 	</header>
 	<body>
 	<div class="nav-left">
-		<h2>Mix Martial Arts</h2>
 	   <div id="sports">
-		    <h3><a data-connect-DB='0'>Submissions</a></h3>
-		    <h3><a data-connect-DB='1'>Striking</a></h3>
-		    <h3><a data-connect-DB='2'>Wrestling</a></h3>
+			 	<% for(var i=0; i< data.length; i++) {%>
+					<% if (i == 0){%>
+						<h2>Mix Martial Arts</h2>
+					<% } %>
+					<% if (i == 3){%>
+						<h2>Workouts</h2>
+					<% } %>
+		    	<h3><a href="/events/<%= data[i].conId %>"><%= data[i].name %></a></h3>
+				<% } %>
      </div>
-	 <h2>Workouts</h2>
-	   <div id="training">
-			 <h3><a data-connect-DB='3'>Weight Training</a></h3>
-			 <h3><a data-connect-DB='4'>Cardio</a></h3>
-			 <h3><a data-connect-DB='5'>Sparring</a></h3>
-		 </div>
+
 	 </div>
 
 		 <div class="info" data-connector>
@@ -35,7 +35,7 @@
 	</body>
 	<!--This is the backwards text box widget-->
 	<footer>
-		<% include ./footer.ejs %>
+		<% include ./partials/footer.ejs %>
 		<script src="DB/connectDB.js"></script>
 		<script src="DB/connector.js"></script>
 	  <h3 id="link2"><a href="https://www.mmafighting.com/schedule/" target="_blank">Click here for MMA Events</a></h3>

@@ -5,7 +5,8 @@ body
   background-color #FFF8DC;
   background-position: 150% 180%;
   margin-top: 3px;
-
+  min-height: 100vh;
+  height: 100%;
   font-size: 15px;
 	color: #000000;
 	margin-top: 3px;
@@ -40,10 +41,10 @@ a{
   bottom: 10%;
   left: 70%;
 }
-li{/*navigation bar css stylesheet*/
+.nav li{/*navigation bar css stylesheet*/
 	display: inline;
 }
-ul {
+.nav ul {
 	list-style-type: none; margin: 0;
 	padding: 0; overflow: hidden; background: green; font-size: 25px;
 }
@@ -88,7 +89,7 @@ input[type=text]{width: 50%;
   display: inline;
 }
 #footer{
-  list-style-type: none; margin: 0; position: absolute; bottom: 0; width: 99%;
+  list-style-type: none; margin: 0; position: relative; bottom: 0; width: 100%;
 	padding: 0; overflow: hidden; background: green; font-size: 20px;
 
 }

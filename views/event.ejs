@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events</title>
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <% include partials/nav.ejs %>
+
+    <ul>
+      <li><%= data.name %></li>
+      <li><%= data.type %></li>
+      <li><%= data.host %></li>
+      <li><%= data.date %></li>
+      <li><%= data.detail %></li>
+      <li><%= data.time %></li>
+    </ul>
+
+
+
+
+
+<footer>
+  <% include ./partials/footer.ejs %>
+</footer>
+</body>
+</html>

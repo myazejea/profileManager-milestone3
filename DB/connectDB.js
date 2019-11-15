@@ -83,4 +83,4 @@ class ConnectDB {
 }
 // export only class with methods to make sure, other part of this app can't modify hardcoded data.
 
-module.exports = ConnectDB;
+module.exports = connections;
