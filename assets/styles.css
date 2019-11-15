@@ -1,0 +1,119 @@
+body
+{
+  background-repeat: no-repeat;
+  background-size: 27%
+  background-color #FFF8DC;
+  background-position: 150% 180%;
+  margin-top: 3px;
+
+  font-size: 15px;
+	color: #000000;
+	margin-top: 3px;
+}
+.main{
+    position: absolute;
+    top: 10%;
+    left: 10%;}
+
+table{background: lightskyblue; color: #FFFFFF;font-size:22pt}
+table, th, td {
+    border: 1px solid black;
+
+  }
+table tr td{text-align: center; background: lightblue; color: #2E4CF3; font-size: 20pt; padding:10px}
+
+#link{
+  position: absolute;  bottom: 7%;  left: 70%;
+}
+#link2{
+  position: fixed; bottom: 7%; left: 70%;
+}
+a{
+  color: orangered;
+}
+.bg{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+#about{
+  position: absolute;
+  bottom: 10%;
+  left: 70%;
+}
+li{/*navigation bar css stylesheet*/
+	display: inline;
+}
+ul {
+	list-style-type: none; margin: 0;
+	padding: 0; overflow: hidden; background: green; font-size: 25px;
+}
+#mma{
+position: fixed; top: 0; left: 2%; color: #FFFF00; font-size: 25px; font-style: italic;
+}
+#login{
+ position: fixed; top: 0; right: 5%;
+}
+#signup{
+  position: fixed; top: 10%; right: 3.5%;
+}
+#events{
+  position: fixed; top: 10%; left: 2%;
+}
+input[type=text]{width: 50%;
+  padding: 6px 20px;
+  margin: 4px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;}
+ input[type=submit]{width: 10%;
+ display: block;
+ align: right;
+ margin: 10px;
+ border-radius: 5px}
+.nav{
+	text-align: center; display: inline; color: green;
+}
+.nav a:hover{
+	text-decoration: none; color: black;
+}
+.nav a{
+	text-decoration: none;
+	color: gold;
+}
+#datepicker{
+  display: inline;
+}
+#form1{
+  display: inline;
+}
+#footer{
+  list-style-type: none; margin: 0; position: absolute; bottom: 0; width: 99%;
+	padding: 0; overflow: hidden; background: green; font-size: 20px;
+
+}
+footer a{
+  color: #006400; padding: 10px;
+}
+footer a{
+  color: #ffffff;
+}
+.footer-text{
+  margin: auto;
+}
+.social-links a{
+  display:block; float: left; width: 36px; color: #ffffff; margin-right: 2rem;
+}
+.social-links a i{
+  padding: 12px 11px; font-size: 30px; color: #ffffff;
+}
+.social-links .fab{
+  color: #ffffff !important;
+}
+#sports{display: block; width: 36px; text-decoration: none}
+.nav-left {
+  float: left;
+}
+.info {
+  float: right;
+}

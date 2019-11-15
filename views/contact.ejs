@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+  <html>
+
+  <head>
+    <title>Contact Us</title>
+     <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <header>
+    <% include partials/nav.ejs %>
+  </header>
+  <body background="/assets/images/background.jpg>
+    <% include partials/background.ejs %>
+    <br><br>
+
+    <div class="form1"><!--link to thankyou page-->
+      <form action="thankyou.html" method="get" >
+        <input type="text" name="name" placeholder="Your Name" id="" required>
+
+        <!--datepicker widget-->
+        <p>Date: <input type="text" id="datepicker" placeholder="Please pick a date" required></p>
+       <div class="rating">
+          <i class="fa fa-star" data-rate="1"></i>
+          <i class="fa fa-star" data-rate="2"></i>
+          <i class="fa fa-star" data-rate="3"></i>
+          <i class="fa fa-star" data-rate="4"></i>
+          <i class="fa fa-star" data-rate="5"></i>
+          <input type="hidden" id="rating-count" name="rating" value="0">
+        </div>
+        <br>
+        <textarea  name="rate" placeholder="What do you think about my website..." id="" cols="30" rows="10" required></textarea>
+        <br><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+<% include ./footer.ejs %>
+  </body>
+
+  </html>
