@@ -10,27 +10,19 @@
 	</header>
 	<body>
 	<div class="nav-left">
-	   <div id="sports">
+	   <div class="w100">
+			 <h2>All Events</h2>
+
 			 	<% for(var i=0; i< data.length; i++) {%>
 					<% if (i == 0){%>
-						<h2>Mix Martial Arts</h2>
 					<% } %>
 					<% if (i == 3){%>
-						<h2>Workouts</h2>
 					<% } %>
 		    	<h3><a href="/events/<%= data[i].conId %>"><%= data[i].name %></a></h3>
 				<% } %>
      </div>
 
 	 </div>
-
-		 <div class="info" data-connector>
-				<div data-name></div>
-				<div data-type></div>
-				<div data-host></div>
-				<div data-detail></div>
-				<div data-time></div>
-			</div>
 
 	</body>
 	<!--This is the backwards text box widget-->

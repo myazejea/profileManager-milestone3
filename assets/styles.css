@@ -49,17 +49,27 @@ a{
 	padding: 0; overflow: hidden; background: green; font-size: 25px;
 }
 #mma{
-position: fixed; top: 0; left: 2%; color: #FFFF00; font-size: 25px; font-style: italic;
+position: absolute; top: 0; width: 100%; text-align: center; color: #FFFF00; font-size: 25px; font-style: italic;
 }
 #login{
- position: fixed; top: 0; right: 5%;
+ position: absolute; top: 1%; right: 5%;
 }
 #signup{
-  position: fixed; top: 10%; right: 3.5%;
+  position: absolute; top: 10%; right: 3.5%;
 }
 #events{
-  position: fixed; top: 10%; left: 2%;
+  padding: 0 15px;
 }
+#home{
+  padding: 0 15px;
+}
+#newEvent{
+  position: absolute; top: 10%; left: 2%;
+}
+#savedEvents{
+  position: absolute; top: 1%; left: 2%;
+}
+
 input[type=text]{width: 50%;
   padding: 6px 20px;
   margin: 4px 0;
@@ -117,4 +127,12 @@ footer a{
 }
 .info {
   float: right;
+}
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.w100 {
+  width: 100%;
 }

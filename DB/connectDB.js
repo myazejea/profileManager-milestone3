@@ -1,4 +1,4 @@
-var connections = [{
+var events = [{
   "conId": 1,
   "name": "Submissions",
   "type": "Jui-Jitsu, Wrestiling, Judo, Krav Maga",
@@ -59,28 +59,20 @@ class ConnectDB {
         return events;
     }
 
-    getConnection(conId){
+    getById(conId){
         if (conId !== undefined){
-            let connection = connections.filter(connection => connection.conId == conId);
-            return connection[0]; // returning first element, as filter returns an array.
+            return events.filter(event => event.conId == conId)[0]; // returning first element, as filter returns an array.
         } else {
             throw new Error("Invalid Connection Id");
         }
     }
-
-    getTopics(){
-        let topics = new Array();
-       connections.forEach(connection => {
-            if(!topics.includes(connection.topic)){
-                topics.push(connection.topic);
-            }
-        });
-
-        if (topics !== undefined){
-            return topics;
-        }
+    addEvent(event){
+        events.push(event); // returning first element, as filter returns an array.
+    }
+    delById(id){
+        events = events.filter(event => event.conId != id); // returning first element, as filter returns an array.
     }
 }
 // export only class with methods to make sure, other part of this app can't modify hardcoded data.
 
-module.exports = connections;
+module.exports = ConnectDB;
