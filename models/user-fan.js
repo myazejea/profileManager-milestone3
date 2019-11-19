@@ -1,6 +1,6 @@
 var User = require('./user');
 var FanConnection = require('./fan-conection');
-var Connection = require('./connection');
+var Connect = require('./connect');
 
 class UserFan{
   user;
@@ -9,23 +9,23 @@ class UserFan{
     this.user = user;
     this.fanConnections = fanConnections;
   }
-  addConnection(connection, rspv){
-  if(connection instanceof Connection){
+  addConnection(connect, rspv){
+  if(connect instanceof Connect){
     for(let i = 0; i < fanConnections.length; i++){
-      if(this.fanConnections[i].connection.connectionName === connection.connectionName()){
-        throw new Error('Connection ${connection.connectionName()}exists');
+      if(this.fanConnections[i].connect.connectName === connect.connectName()){
+        throw new Error('Connect ${connect.connectName()}exists');
       }
     }
-    let  newFanConnection = new FanConnection(connection, rspv);
+    let  newFanConnection = new FanConnection(connect, rspv);
     this.fanConnections.push(newFanConnection);
   }else{
     throw new Error("This connection should be an Object");
   }
 }
-removeConnection(connection){
-if(connection instanceof Connection){
+removeConnection(connect){
+if(connection instanceof Connect){
   for(let j = 0; j < fanConnections.length; j++){
-    if(this.fanConnections[i].connection.connectionName === connection.connectionName()){
+    if(this.fanConnections[i].connect.connectName === connect.connectName()){
       this.fanConnections.splice(j, 1);
       break;
     }
@@ -44,7 +44,7 @@ emptyFan(){
 updateConnection(fanConnection){
   if(fanConnection instanceof fanConnection){
     for(let k = 0; k < fanConnections.length; k++){
-      if(this.fanConnections[i].connection.connectionName === connection.connectionName()){
+      if(this.fanConnections[i].connect.connectName === connect.connectName()){
         this.fanConnections[k] = fanConnection;
         break;
     }
