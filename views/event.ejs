@@ -18,10 +18,9 @@
       <div>
       <span>
       <h2>Would you like to attend?</h2>
-        <a href="/savedEvents" class="btn btn-success">Yes</a>
-        <input id="yes" type="button" required="required" value="Yes" onclick="/views/savedEvents.ejs" />
-        <input id="no" type="button" required="required" value="No" onclick="/views/savedEvents.ejs" />
-        <input id="maybe" type="button" required="required" value="Maybe" onclick="/views/savedEvents.ejs" />
+        <a id="yes" href="/savedEvents" class="btn btn-success">Yes</a>
+        <a id="no" href="/savedEvents" class="btn btn-danger">No</a>
+        <a id="maybe" href="/savedEvents" class="btn btn-blue">Maybe</a>
         <input id="backButton" type="button" value="Back" onclick="history.back(-1)" />
       </span>
       </div>
