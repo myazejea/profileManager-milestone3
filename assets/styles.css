@@ -21,7 +21,7 @@ table, th, td {
     border: 1px solid black;
 
   }
-table tr td{text-align: center; background: lightblue; color: #2E4CF3; font-size: 20pt; padding:10px}
+.col {text-align: center; background: lightblue; color: #2E4CF3; font-size: 20pt; padding:10px}
 
 #link{
   position: absolute;  bottom: 3%;  left: 70%;
@@ -55,6 +55,7 @@ table tr td{text-align: center; background: lightblue; color: #2E4CF3; font-size
 #eventsForm{
   float:left;
 }
+
 a{
   color: black;
   text-decoration: none;

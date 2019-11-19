@@ -5,6 +5,7 @@ var config = require('./config/database');
 var ConnectDB = require('./DB/connectDB');
 var passport = require('passport');
 var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
 
 app.set('view engine', 'ejs');
 data = new ConnectDB()
@@ -12,6 +13,7 @@ app.use('/assets', express.static('assets'));//This is middleware to use or get 
 app.use('/images', express.static('images'));
 app.use('/DB', express.static('DB'));
 app.use('/events',express.static('events'));
+app.use(bodyParser.urlencoded({ extended: false }))
 
 // var library = require('./routes/libraryNav.js');
 // app.use('/library', library);
@@ -37,6 +39,9 @@ app.get('/events/:id', function(req,res){
 });
 
 app.post('/events/:id/status', function(req,res){
+  status = data.getById(req.params.id);
+  status["going"] = req.body.button;
+  console.log(status)
   res.redirect('/savedEvents');
 });
 

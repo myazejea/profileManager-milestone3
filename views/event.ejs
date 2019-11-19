@@ -15,11 +15,13 @@
       <li><%= data.date %></li>
       <li><%= data.detail %></li>
       <li><%= data.time %></li>
+      <div>
+      <span>
       <h2>Would you like to attend?</h2>
       <form action="<%= data.conId %>/status" method="POST">
-        <input id="no" type="submit" required="required" value="yes" name="yes" />
-        <input id="no" type="submit" required="required" value="No" name="no" />
-        <input id="maybe" type="submit" required="required" value="Maybe" name="maybe" />
+        <button id="yes" required="required" value="yes" name="button">Yes</button>
+        <button id="no" required="required" value="no" name="button">No</button>
+        <button id="maybe" required="required" value="maybe" name="button">Maybe</button>
         <input id="backButton" type="submit" value="Back" onclick="history.back(-1)" />
       <form>
 
