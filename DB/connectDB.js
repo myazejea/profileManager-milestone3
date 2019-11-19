@@ -66,9 +66,11 @@ class ConnectDB {
             throw new Error("Invalid Connection Id");
         }
     }
+
     addEvent(event){
         events.push(event); // returning first element, as filter returns an array.
     }
+
     delById(id){
         events = events.filter(event => event.conId != id); // returning first element, as filter returns an array.
     }

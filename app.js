@@ -4,6 +4,8 @@ var app = express();
 var config = require('./config/database');
 var ConnectDB = require('./DB/connectDB');
 var passport = require('passport');
+var mongoose = require('mongoose');
+
 app.set('view engine', 'ejs');
 data = new ConnectDB()
 app.use('/assets', express.static('assets'));//This is middleware to use or get styles.css code to be used
@@ -13,6 +15,7 @@ app.use('/events',express.static('events'));
 
 // var library = require('./routes/libraryNav.js');
 // app.use('/library', library);
+
 app.get('/', function(req,res){
   res.render('index', {fans: req.query});
 });

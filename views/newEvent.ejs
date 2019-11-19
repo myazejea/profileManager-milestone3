@@ -7,7 +7,18 @@
     <% include partials/nav.ejs %>
   </head>
   <body>
-
+    <% include partials/background.ejs %>
+    <form class="newEventForm" method="POST" action="/newEvent">
+      <label for="nameEvent">What event do you want to add?</label>
+      <input type="text" name="newEvent">
+      <label for="where">Where will the event take place?</label>
+      <input type="text" name="place" >
+      <label for="when">What time will the event start?</label>
+      <input type="text" name="startTime">
+      <label for="dateOfEvent">What is the date of event?</label>
+      <input type="text" name="datepicker">
+      <input type="submit" id="txbox" value="submit"/>
+    </form>
   </body>
   <footer>
     <% include ./partials/footer.ejs %>

@@ -24,13 +24,40 @@ table, th, td {
 table tr td{text-align: center; background: lightblue; color: #2E4CF3; font-size: 20pt; padding:10px}
 
 #link{
-  position: absolute;  bottom: 7%;  left: 70%;
+  position: absolute;  bottom: 3%;  left: 70%;
 }
 #link2{
-  position: fixed; bottom: 7%; left: 70%;
+  position: absolute; bottom: 3%; left: 70%;
+}
+#backButton{
+  border-radius: 15%;
+  background-color: lightblue;
+}
+#yes{
+  border-radius: 15%;
+  background: green;
+}
+#no{
+  border-radius: 15%;
+  background-color: red;
+}
+#maybe{
+  border-radius: 15%;
+  background-color: yellow;
+}
+#allEventsbuttons:hover{
+   background-color: green;
+ }
+#fighter{
+  float: left;
+  margin-top: 10px;
+}
+#eventsForm{
+  float:left;
 }
 a{
-  color: orangered;
+  color: black;
+  text-decoration: none;
 }
 .bg{
   opacity: 0.5;
@@ -38,7 +65,7 @@ a{
 }
 #about{
   position: absolute;
-  bottom: 10%;
+  bottom: 3%;
   left: 70%;
 }
 .nav li{/*navigation bar css stylesheet*/
@@ -99,7 +126,7 @@ input[type=text]{width: 50%;
   display: inline;
 }
 #footer{
-  list-style-type: none; margin: 0; position: relative; bottom: 0; width: 100%;
+  list-style-type: none; margin: 0; position: fixed; bottom: 0; width: 98.7%;
 	padding: 0; overflow: hidden; background: green; font-size: 20px;
 
 }

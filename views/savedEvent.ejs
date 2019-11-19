@@ -1,9 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    <script src="DB/connectDB.js"></script>
+    <% include partials/nav.ejs %>
   </head>
   <body>
-
+    <div id="yes">
+      <h3>Events I am going to</h3>
+      <ul>
+       <li><%= data.name %></li>
+       <li><%= data.date %></li>
+      </ul>
+    </div>
+    <div id="no">
+      <ul>
+        <li><%= data.name %></li>
+        <li><%= data.date %></li>
+      </ul>
+    </div>
+    <div id="maybe">
+      <ul>
+        <li><%= data.name %></li>
+        <li><%= data.date %></li>
+      </ul>
+    </div>
   </body>
+  <footer>
+    <% include ./partials/footer.ejs %>
+  </footer>
 </html>
