@@ -16,10 +16,12 @@
       <li><%= data.detail %></li>
       <li><%= data.time %></li>
       <h2>Would you like to attend?</h2>
-        <input id="yes" type="button" required="required" value="Yes" onclick="/views/savedEvents.ejs" />
-        <input id="no" type="button" required="required" value="No" onclick="/views/savedEvents.ejs" />
-        <input id="maybe" type="button" required="required" value="Maybe" onclick="/views/savedEvents.ejs" />
-        <input id="backButton" type="button" value="Back" onclick="history.back(-1)" />
+      <form action="<%= data.conId %>/status" method="POST">
+        <input id="no" type="submit" required="required" value="yes" name="yes" />
+        <input id="no" type="submit" required="required" value="No" name="no" />
+        <input id="maybe" type="submit" required="required" value="Maybe" name="maybe" />
+        <input id="backButton" type="submit" value="Back" onclick="history.back(-1)" />
+      <form>
 
      <br tyle="clear: both;">
 

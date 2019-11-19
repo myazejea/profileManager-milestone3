@@ -1,4 +1,4 @@
-var Connect = require('.connect');
+var Connect = require('./connect');
 
 class FanConnection{
   constructor(connect, rspv){
@@ -26,4 +26,5 @@ class FanConnection{
     this._rspv = value;
   }
 }
+
 module.exports = FanConnection;

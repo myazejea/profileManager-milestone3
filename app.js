@@ -29,11 +29,15 @@ app.get('/newEvent', function(req,res){
 });
 
 app.get('/savedEvents', function(req,res){
-  res.render('savedEvent', {data: data});
+  res.render('savedEvent', { data: data });
 });
 
 app.get('/events/:id', function(req,res){
   res.render('event', {data: data.getById(req.params.id)});
+});
+
+app.post('/events/:id/status', function(req,res){
+  res.redirect('/savedEvents');
 });
 
 app.get('/contact', function(req,res){
@@ -43,7 +47,6 @@ app.get('/contact', function(req,res){
 app.get('/about', function(req,res){
   res.render('about');
 });
-
 
 app.get('/login', function(req, res){
   res.render('login');
