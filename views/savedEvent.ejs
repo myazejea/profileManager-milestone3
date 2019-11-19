@@ -3,28 +3,45 @@
   <head>
     <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
     <script src="DB/connectDB.js"></script>
-    <% include partials/nav.ejs %>
+      <title>Event interests</title>
   </head>
   <body>
-    <div id="yes">
-      <h3>Events I am going to</h3>
+    <% include partials/nav.ejs %>
+    <div class="container">
+    <div id="row">
+      <section id="col-12 mt-5">
+        <h3></h3>
+        <table id="table table-border">
+          <thread>
+            <tr>
+              <th scope="col">Events</th>
+              <th scope="col">Details</th>
+              <th scope="col">Plans?</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thread>
+        </tbody>
+        </section>
+        </div>
+      </div>
+    <!-- <div class="yes">
       <ul>
        <li><%= data.name %></li>
        <li><%= data.date %></li>
       </ul>
     </div>
-    <div id="no">
+    <div class="no">
       <ul>
         <li><%= data.name %></li>
         <li><%= data.date %></li>
       </ul>
     </div>
-    <div id="maybe">
+    <div class="maybe">
       <ul>
         <li><%= data.name %></li>
         <li><%= data.date %></li>
       </ul>
-    </div>
+    </div> -->
   </body>
   <footer>
     <% include ./partials/footer.ejs %>
