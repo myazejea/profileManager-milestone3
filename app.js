@@ -42,7 +42,7 @@ app.post('/events/:id/status', function(req,res){
   status = data.getById(req.params.id);
   status["going"] = req.body.button;
   console.log(status)
-  res.redirect('/savedEvents');
+  res.redirect('/savedEvents', {data: status});
 });
 
 app.get('/contact', function(req,res){
