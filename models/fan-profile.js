@@ -12,8 +12,8 @@ class FanProfile{
   addConnection(connection, rspv){
     if(connection instanceof Connection){
       for(let i = 0; i < fanConnections.length; i++){
-        if(this.fanConnections[i].connection.connectionName === connection.connectionName()){
-          throw new Error('Connection ${connection.connectionName()}exists');
+        if(this.fanConnections[i].connect.connectName === connection.connectName()){
+          throw new Error('Connection ${connection.connectName()}exists');
         }
       }
       let newFanConnection = new FanConnection(connection, rspv);
@@ -44,7 +44,7 @@ class FanProfile{
     updateConnection(fanConnection){
       if(fanConnection instanceof fanConnection){
         for(let k = 0; k < fanConnections.length; k++){
-          if(this.fanConnections[i].connection.connectionName === connection.connectionName()){
+          if(this.fanConnections[k].connect.connectName === connect.connectName()){
             this.fanConnections[k] = fanConnection;
             break;
         }

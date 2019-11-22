@@ -7,38 +7,42 @@
   </head>
   <body>
     <% include partials/nav.ejs %>
-    <div class="container">
-    <div class="row">
-      <!-- <section class="colDisplay"> -->
-        <h3></h3>
-            <div>
-              <div class="col">Events</div>
-              <div class="col">Details</div>
-              <div class="col">Plans?</div>
-              <div class="col">Actions</div>
-            </div>
 
-        <!-- </section> -->
-        </div>
-      </div>
-    <!-- <div class="yes">
-      <ul>
-       <li><%= data.name %></li>
-       <li><%= data.date %></li>
-      </ul>
-    </div>
-    <div class="no">
-      <ul>
-        <li><%= data.name %></li>
-        <li><%= data.date %></li>
-      </ul>
-    </div>
-    <div class="maybe">
-      <ul>
-        <li><%= data.name %></li>
-        <li><%= data.date %></li>
-      </ul>
-    </div> -->
+       <table id="list" border="1"align="center">
+         <tr action="<%= data.conId %>/status" method="POST">
+           <th>Events<%= data.connectName %></th>
+           <th>Details<%= data.connectHost %></th>
+           <th>Going</th>
+           <th>Action</th>
+         </tr>
+         <tr>
+           <td>Wrestling</td>
+            <td>WWE</td>
+            <td>Maybe</td>
+            <td>
+              <a href="/connect/3" class="update">Update</a>
+              <a href="myEvents" class="delete">Delete</a>
+            </td>
+         </tr>
+         <tr>
+           <td>Judo Tournoment</td>
+            <td>World Judo Championship</td>
+            <td>Yes</td>
+            <td>
+              <a href="/connect/3" class="update">Update</a>
+              <a href="myEvents" class="delete">Delete</a>
+            </td>
+         </tr>
+         <tr>
+           <td><%= data.status %></td>
+           <td><%= data.detail %></td>
+           <td></td>
+           <td></td>
+         </tr>
+
+       </table>
+       <span id="val"</span>
+
   </body>
   <footer>
     <% include ./partials/footer.ejs %>

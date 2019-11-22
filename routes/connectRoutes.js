@@ -36,6 +36,7 @@ router.get('/connections', function(req, res, next) {
   };
 
   res.render('connections', { data: data });
+  res.redirect('/savedEvents'{data: status});
 });
 
 

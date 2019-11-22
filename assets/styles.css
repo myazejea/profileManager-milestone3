@@ -1,28 +1,41 @@
 body
 {
   background-repeat: no-repeat;
-  background-size: 27%
-  background-color #FFF8DC;
-  background-position: 150% 180%;
-  margin-top: 3px;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   min-height: 100vh;
   height: 100%;
-  font-size: 15px;
-	color: #000000;
+  /* font-size: 15px; */
+	/* color: #000000; */
 	margin-top: 3px;
 }
 .main{
     position: absolute;
     top: 10%;
     left: 10%;}
+.update{
+  border-radius: 15%;
+  background-color: #40E0D0;
+  border: double;
+}
+.delete{
+  border-radius: 15%;
+  background-color: #FF00FF;
+  border: double;
+}
 
-table{background: lightskyblue; color: #FFFFFF;font-size:22pt}
+
+/* table{background: lightskyblue; color: #FFFFFF;font-size:22pt}
 table, th, td {
     border: 1px solid black;
 
-  }
-.col {text-align: center; background: lightblue; color: #2E4CF3; font-size: 20pt; padding:10px}
-
+  } */
+.col {text-align: center; background: lightblue; color: #2E4CF3; font-size: 20pt; padding:30px}
+#list{text-align: center; width: 100%;background: white; font-size: 18pt}
+th{ background: lightgreen; height: 70px}
 #link{
   position: absolute;  bottom: 3%;  left: 70%;
 }
