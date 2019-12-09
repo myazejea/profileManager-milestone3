@@ -1,4 +1,4 @@
-var User = require('./fan');
+var User = require('./user');
 var FanConnection = require('./fan-conection');
 var Connection = require('./connect');
 

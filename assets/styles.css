@@ -1,21 +1,30 @@
-body
+.image1
 {
+  background-image: url(/assets/images/background.jpg);
   background-repeat: no-repeat;
-  background-position: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  min-height: 100vh;
-  height: 100%;
-  /* font-size: 15px; */
-	/* color: #000000; */
+  background-size: 25%;
+	background-attachment: fixed;
+  background-position: center bottom;
+  background-color #FFF8DC;
+  margin-top: 3px;
+
+  font-size: 20px;
+	color: #000000;
 	margin-top: 3px;
 }
-.main{
-    position: absolute;
-    top: 10%;
-    left: 10%;}
+.image2
+{
+background-image: url(/assets/images/homeAgain.PNG);
+background-repeat: no-repeat;
+background-position: fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+min-height: 50vh;
+height: 50%;
+margin-top: 3px;
+}
 .update{
   border-radius: 15%;
   background-color: #40E0D0;
@@ -111,7 +120,14 @@ position: absolute; top: 0; width: 100%; text-align: center; color: #FFFF00; fon
   position: absolute; top: 1%; left: 2%;
 }
 
-input[type=text]{width: 50%;
+input[type=text]{width: 30%;
+  padding: 6px 20px;
+  margin: 4px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;}
+input[type=email]{width: 30%;
   padding: 6px 20px;
   margin: 4px 0;
   display: block;
@@ -119,10 +135,17 @@ input[type=text]{width: 50%;
   border-radius: 2px;
   box-sizing: border-box;}
  input[type=submit]{width: 10%;
- display: block;
- align: right;
- margin: 10px;
- border-radius: 5px}
+  display: block;
+  align: right;
+  margin: 10px;
+  border-radius: 5px}
+textarea[type=rate]{width: 30%;
+  padding: 6px 20px;
+  margin: 4px 0;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;}
 .nav{
 	text-align: center; display: inline; color: green;
 }

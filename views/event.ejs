@@ -4,7 +4,8 @@
     <title>Events</title>
     <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body class="image1">
+
   <% include partials/nav.ejs %>
   <div id="container">
     <img id="fighter" src="/assets/images/fighter.jpg" width="350" height="200" />
@@ -15,6 +16,7 @@
       <li><%= data.date %></li>
       <li><%= data.detail %></li>
       <li><%= data.time %></li>
+    </ul>
       <div>
       <span>
       <h2>Would you like to attend?</h2>
@@ -23,6 +25,7 @@
         <button id="no" required="required" value="no" name="button">No</button>
         <button id="maybe" required="required" value="maybe" name="button">Maybe</button>
         <button id="backButton"><a  href="/events">Back</a></button>
+        <a href="/views/savedEventForm">Posted on mongodb</a>
       <form>
 
      <!-- <input id="backButton" type="submit" value="Back" onclick="history.back(-1)" /> -->

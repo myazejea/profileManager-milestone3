@@ -5,45 +5,37 @@
     <script src="DB/connectDB.js"></script>
       <title>Event interests</title>
   </head>
-  <body>
+  <body class="image1">
     <% include partials/nav.ejs %>
+      <h1>Saved Event Database</h1>
+      <form action="/collection" method="POST">
+          <table id="list" border="1"align="center">
+             <tr>
+                 <th>Event</th>
+                 <th>Details</th>
+                 <th>Going</th>
+                 <th>Action</th>
+               </tr>
 
-       <table id="list" border="1"align="center">
-         <tr action="<%= data.conId %>/status" method="POST">
-           <th>Events<%= data.connectName %></th>
-           <th>Details<%= data.connectHost %></th>
-           <th>Going</th>
-           <th>Action</th>
-         </tr>
-         <tr>
-           <td>Wrestling</td>
-            <td>WWE</td>
-            <td>Maybe</td>
-            <td>
-              <a href="/connect/3" class="update">Update</a>
-              <a href="myEvents" class="delete">Delete</a>
-            </td>
-         </tr>
-         <tr>
-           <td>Judo Tournoment</td>
-            <td>World Judo Championship</td>
-            <td>Yes</td>
-            <td>
-              <a href="/connect/3" class="update">Update</a>
-              <a href="myEvents" class="delete">Delete</a>
-            </td>
-         </tr>
-         <tr>
-           <td><%= data.status %></td>
-           <td><%= data.detail %></td>
-           <td></td>
-           <td></td>
-         </tr>
+            <% for (var i =0; i< data.length; i++){ %>
+              <tr>
+              <td> <%= data[i].name %> </td>
+              <td> <%= data[i].details %> </td>
+              <td> <%= data[i].time %> </td>
+              <td> <%= data[i].going %> </td>
+              <td><a href="/update/<%= data[i]._id %>" class="update">Update</a>
+              <button type="submit" name="idToDel" value="<%= data[i]._id %>">Delete</button></td>
+              <td> </td>
+            </tr>
+              <%}%>
 
-       </table>
-       <span id="val"</span>
 
-  </body>
+
+         </table>
+       </form>
+         <span id="val"</span>
+
+    </body>
   <footer>
     <% include ./partials/footer.ejs %>
   </footer>
